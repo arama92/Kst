@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Single Page Application</title>
+    <link rel="stylesheet" type="text/css" href="MainCss.css">
+    <script src="CheckBoxSelect.js"></script>
+    <script src="FormatCafe.js"></script>
+    <script src="PrintTable.js"></script>
+    <script src="Cafe.js"></script>
+  </head>
+  <body>
+    <div class="Setting-dinner">
+      <form>
+          <div class="def-normal-str">
+            <label for="text-0001" class="def-label">Цена банкета</label>
+            <input placeholder="максимальная сумма" onKeyPress="CheckInputNumber()" class="form-control" name="text-0001" id="text-0001">
+          </div>
+
+          <div class="def-normal-str">
+            <label for="text-0002" class="def-label">Количество гостей</label>
+            <input onKeyPress="CheckInputNumber()" class="form-control" name="text-0002" id="text-0002">
+          </div>
+
+          <div class="def-normal-str">
+            <label for="BeginCalendar EndCalendar" class="def-label">Выберите дату</label>
+            <input type="date" name="BeginCalendar" id="text-0003-1" min="2019-10-1">
+          </div>
+
+          <div class="def-normal-str">
+            <div class="multiselect">
+              <div class="selectBox" onclick="showCheckboxes()">
+                <select>
+                  <option>Пожелания</option>
+                </select>
+                <div class="overSelect"></div>
+              </div>
+              <div id="checkboxes" class="unselectable">
+                <label> <input type="checkbox">Детский</input></label>
+                <label> <input type="checkbox">Взрослый</input></label>
+                <label> <input type="checkbox">Анимация</input></label>
+                <label> <input type="checkbox">Тематический</input></label>
+                <label> <input type="checkbox">Известный</input></label>
+              </div>
+            </div>
+          </div>
+
+          <table>
+            <tr>
+              <td colspan="3" align="center">Результат</td>
+            </tr>
+            <tr>
+              <td><input type="button" id="btn1" class="def-button" onclick="clickButton(this.id)" value="Полное совпадение"/></td>
+              <td><input type="button" id="btn2" class="def-button" onclick="clickButton(this.id)" value="Частичное совпадение"/></td>
+              <td><input type="button" id="btn3" class="def-button" onclick="clickButton(this.id)" value="Все предложения"/></td>
+            </tr>
+          </table>
+      </form>
+    </div>
+
+    <div class="AnyResult">
+        <table class="TableResult" id="MainTable">
+          <thead>
+            <tr>
+              <th>Название</th>
+              <th>Цена за персону</th>
+          <!--<th>maxPerson</th>-->
+              <th>date</th>
+              <th>Контакты</th>
+              <th>Стоимость банкета</th>
+            </tr>
+          </thead>
+        </table>
+    </div>
+    <h1 id="errors">ERRRROOR</h1>
+  </body>
+</html>

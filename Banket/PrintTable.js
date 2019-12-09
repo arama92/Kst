@@ -20,7 +20,7 @@ function clickButton(clicked_id) {
     }
   }
 }
-
+// 1е изменение
 //получение данных с полей ввода
 function CheckInput(){
 
@@ -40,7 +40,7 @@ function CheckInput(){
   }
   return true;
 }
-
+// 2е изменение
 //Полное совпадение
 function clickBut1(){
   let _CurrLenght = GetLenghtArrayFeatures(Current.features);
